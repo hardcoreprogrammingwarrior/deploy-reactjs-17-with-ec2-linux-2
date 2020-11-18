@@ -14,6 +14,7 @@ $ node -e "console.log('Running Node.js ' + process.version)"
 Running Node.js v15.2.1
 $ sudo amazon-linux-extras list
 $ sudo amazon-linux-extras install -y nginx1 or sudo amazon-linux-extras enable nginx1 -y  
+$ npm install pm2 -g   
 $ sudo mkdir /var/www  
 $ cd /var/www/  
 $ npx create-react-app my-app
@@ -35,23 +36,11 @@ server {
     	     proxy_set_header X-Forwarded-For $remote_addr;
      	proxy_set_header Host $http_host;
           proxy_pass http://3.138.120.99:3000;
-     }
-}
+     }  
+}  
 ```
 
 **Start nginx**  
 ```blade
 sudo service nginx start
 ```
-
-
-server {
-     listen 80;  
-     server_name _;
-     
-     location / {
-    	     proxy_set_header X-Forwarded-For $remote_addr;
-     	proxy_set_header Host $http_host;
-          proxy_pass http://3.138.120.99:3000;
-     }
-}
