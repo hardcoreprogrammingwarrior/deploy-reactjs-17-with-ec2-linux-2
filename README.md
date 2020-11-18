@@ -14,7 +14,6 @@ $ node -e "console.log('Running Node.js ' + process.version)"
 Running Node.js v15.2.1
 $ sudo amazon-linux-extras list
 $ sudo amazon-linux-extras install -y nginx1 or sudo amazon-linux-extras enable nginx1 -y  
-$ npm install pm2 -g   
 $ sudo mkdir /var/www  
 $ cd /var/www/  
 $ npx create-react-app my-app
@@ -43,4 +42,13 @@ server {
 **Start nginx**  
 ```blade
 sudo service nginx start
+```
+
+**Keep react app running even if your logout of the server**  
+```blade
+$ cd /var/www/my-app
+$ npm install pm2 -g   
+$ pm2 list
+$ pm2 start --name my-app npm -- start
+$ pm2 list
 ```
