@@ -1,6 +1,6 @@
 # How to Speedrun Deploy React.js 17 with ec2 linux 2 within 
 Watch it here   
-Laravel v8.12.3 (PHP v7.4.11) Mysql 8.0  
+React.js 17.0.1  
 Since Nov 18, 2020  
 
 ---  
