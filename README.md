@@ -19,7 +19,7 @@ $ npm run build
 ```
 
 ```sh
-$ vim /etc/nginx/sites-available/default
+$ sudo vim /etc/nginx/sites-available/default
 ```
 
 **Add code**  
@@ -31,6 +31,10 @@ server {
      server_name 3.138.120.99;  
      index index.html index.htm;  
      location / {  
+     }
+     location /files/ {   
+        autoindex on;  
+        root /home/ec2-user/my-app/files;  
      }  
 }  
 ```
