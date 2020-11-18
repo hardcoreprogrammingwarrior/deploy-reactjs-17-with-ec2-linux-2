@@ -18,8 +18,13 @@ $ npx create-react-app my-app
 $ npm run build
 ```
 
+```sh
 $ vim /etc/nginx/sites-available/default
+```
 
+**Add code**  
+
+```blade
 server {
      listen 80 default_server;
      root /home/ec2-user/my-app/build;
@@ -28,3 +33,4 @@ server {
      location / {
      }
 }
+```
