@@ -25,12 +25,12 @@ $ vim /etc/nginx/sites-available/default
 **Add code**  
 
 ```blade
-server {
-     listen 80 default_server;
-     root /home/ec2-user/my-app/build;
-     server_name 3.138.120.99;
-     index index.html index.htm;
-     location / {
-     }
-}
+server {  
+     listen 80 default_server;  
+     root /home/ec2-user/my-app/build;  
+     server_name 3.138.120.99;  
+     index index.html index.htm;  
+     location / {  
+     }  
+}  
 ```
