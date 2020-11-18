@@ -14,6 +14,8 @@ $ node -e "console.log('Running Node.js ' + process.version)"
 Running Node.js v15.2.1
 $ sudo amazon-linux-extras list
 $ sudo amazon-linux-extras install -y nginx1 or sudo amazon-linux-extras enable nginx1 -y  
+$ sudo mkdir /var/www  
+$ cd /var/www/  
 $ npx create-react-app my-app
 $ npm run build
 ```
