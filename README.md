@@ -34,3 +34,8 @@ server {
      }  
 }  
 ```
+
+**Start nginx**  
+```blade
+sudo service nginx start
+```
