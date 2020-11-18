@@ -27,21 +27,31 @@ $ sudo vim /etc/nginx/sites-available/default
 **Add code**  
 
 ```blade
-server {  
-     listen 80 default_server;  
-     root /home/ec2-user/my-app/build;  
-     server_name 3.138.120.99;  
-     index index.html index.htm;  
-     location / {  
+server {
+     listen 80;  
+     server_name _;
+     
+     location / {
+    	     proxy_set_header X-Forwarded-For $remote_addr;
+     	proxy_set_header Host $http_host;
+          proxy_pass http://3.138.120.99:3000;
      }
-     location /files/ {   
-        autoindex on;  
-        root /home/ec2-user/my-app/files;  
-     }  
-}  
+}
 ```
 
 **Start nginx**  
 ```blade
 sudo service nginx start
 ```
+
+
+server {
+     listen 80;  
+     server_name _;
+     
+     location / {
+    	     proxy_set_header X-Forwarded-For $remote_addr;
+     	proxy_set_header Host $http_host;
+          proxy_pass http://3.138.120.99:3000;
+     }
+}
