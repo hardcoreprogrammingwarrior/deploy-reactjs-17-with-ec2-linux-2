@@ -15,5 +15,16 @@ Running Node.js v15.2.1
 $ sudo amazon-linux-extras list
 $ sudo amazon-linux-extras install -y nginx1 or sudo amazon-linux-extras enable nginx1 -y  
 $ npx create-react-app my-app
-$ npm start
+$ npm run build
 ```
+
+$ vim /etc/nginx/sites-available/default
+
+server {
+     listen 80 default_server;
+     root /home/ec2-user/my-app/build;
+     server_name 3.138.120.99;
+     index index.html index.htm;
+     location / {
+     }
+}
