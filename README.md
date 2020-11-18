@@ -52,3 +52,8 @@ $ pm2 list
 $ pm2 start --name my-app npm -- start
 $ pm2 list
 ```
+
+**To delete**  
+```blade
+$ pm2 delete my-app
+```
