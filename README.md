@@ -28,13 +28,13 @@ $ sudo vim /etc/nginx/sites-available/default
 
 ```blade
 server {
-     listen 80;  
+     listen 3000;  
      server_name _;
      
      location / {
     	     proxy_set_header X-Forwarded-For $remote_addr;
      	proxy_set_header Host $http_host;
-          proxy_pass http://3.138.120.99:3000;
+          proxy_pass http://3.138.120.99:8080;
      }  
 }  
 ```
